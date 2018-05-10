@@ -66,7 +66,6 @@ ___
 |address|string||
 |money|string||
 
----
 
 ## room_typesテーブル
 
@@ -74,8 +73,6 @@ ___
 |------|----|-------|
 |type|string||
 |room_id|integer|null:false, foreign_key: true|
-
----
 
 ## room_capasitiesテーブル
 
