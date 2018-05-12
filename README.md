@@ -6,24 +6,24 @@
 |------|----|-------|
 |firstname|string|null: false, add_index :users, :name|
 |lastname|string|null: false, add_index :users, :name|
-|gender|string||
+|gender|enum||
 |birthday|string||
 |email|string|null: false, unique: true, add_index :users, :mail_adress|
 |phone_number|string||
 |image|string||
-|desplay_language|string||
+|display_language|string||
 |currency|string||
 |address|string||
 |self_introduction|string||
-|school|string||
-|company|string||
+|school_name|string||
+|company_name|string||
 |standard_time|string||
-|business_mail|string||
+|business_email|string||
 
 ### Association
 - has_many :reservations
-- has_many :rooms, through: :room_users
 - has_many :room_users
+- has_many :rooms, through: :room_users
 - has_many :restaurants
 - has_many :experiences
 - has_many :frequencies
@@ -57,7 +57,7 @@
 
 |Column|Type|Options|
 |------|----|-------|
-|name|string|null: false, unique: true, add_index :users, :name|
+|name|string|null: false|
 |image|string||
 |phone|string||
 |introduction|string||
@@ -94,10 +94,10 @@
 - has_one  :room_rules, dependent: :destroy
 - has_one  :room_notices, dependent: :destroy
 - has_many :reservations
-- has_many :users, through: :room_users
 - has_many :room_users
-- has_many :amenities, through: :amenity_rooms
-- has_many :amenity_rooms
+- has_many :users, through: :room_users
+- has_many :amenities
+- has_many :facilities
 
 ## room_ratesテーブル
 
@@ -140,19 +140,6 @@
 |room_id|references|null:false, foreign_key: true|
 
 ### Association
-- has_many :rooms, through: :amenity_rooms
-- has_many :amenity_rooms
-
-
-## amenity_roomsテーブル
-
-|Column|Type|Options|
-|------|----|-------|
-|amenity_id|references|foreign_key: true|
-|room_id|references|foreign_key: true|
-
-### Association
-- belongs_to :amenity
 - belongs_to :room
 
 ## facilitiesテーブル
@@ -169,20 +156,7 @@
 |gym|boolean||
 
 ### Association
-- has_many :rooms, through: :facility_rooms
-- has_many :facility_rooms
-
-
-## facility_roomsテーブル
-
-|Column|Type|Options|
-|------|----|-------|
-|facility_id|references|foreign_key: true|
-|room_id|references|foreign_key: true|
-
-### Association
-belongs_to :room
-belongs_to :amenity
+- belongs_to :room
 
 ## room_rulesテーブル
 
