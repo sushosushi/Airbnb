@@ -1,30 +1,5 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
-
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
-
-***
-
 ## usersテーブル
 
 |Column|Type|Options|
@@ -32,9 +7,9 @@ Things you may want to cover:
 |firstname|string|null: false, add_index :users, :name|
 |lastname|string|null: false, add_index :users, :name|
 |gender|string||
-|birth|string||
+|birthday|string||
 |email|string|null: false, unique: true, add_index :users, :mail_adress|
-|phone|string||
+|phone_number|string||
 |image|string||
 |desplay_language|string||
 |currency|string||
@@ -47,24 +22,36 @@ Things you may want to cover:
 
 ### Association
 - has_many :reservations
-- has_many :rooms
+- has_many :rooms, through: :room_users
+- has_many :room_users
 - has_many :restaurants
 - has_many :experiences
 - has_many :frequencies
 
+## room_usersテーブル
 
-## reserationsテーブル
+|Column|Type|Options|
+|------|----|-------|
+|user_id|referrences|foreign_key: true|
+|room_id|referrences|foreign_key: true|
+
+### Association
+- belongs_to :user
+- belongs_to :room
+
+## reservationsテーブル
 
 |Column|Type|Options|
 |------|----|-------|
 |check_in|string||
 |check_out|string||
 |number_people|string||
-|user_id|reference|null:false, foreign_key: true|
+|user_id|references|null:false, foreign_key: true|
+|room_id|references|null:false, foreign_key: true|
 
 ### Association
 - belongs_to :user
-
+- belongs_to :room
 
 ## roomsテーブル
 
@@ -74,12 +61,16 @@ Things you may want to cover:
 |image|string||
 |phone|string||
 |introduction|string||
-|capasity_able|integer||
-|bedroom|integer||
+|room_type|string||
+|room_category|string||
+|building_type|string||
+|maximum_capasity|integer||
+|bedroom_number|integer||
 |bed_number|integer||
+|bed_type|string||
 |bathroom|integer||
 |location_country|string||
-|postnumber|integer||
+|postal_code|integer||
 |location_prefecture|string||
 |location|string||
 |family|string||
@@ -99,87 +90,35 @@ Things you may want to cover:
 |checkout_date|string||
 
 ### Association
-- has_many :room_costs
-- has_many :room_types
-- has_many :bedroom_types
-- has_many :room_capasitys
-- has_many :room_categorys
-- has_many :room_buildings
-- has_many :room_amenitys
-- has_many :room_rules
-- has_many :room_notices
-- belongs_to :user
+- has_one  :room_rate, dependent: :destroy
+- has_one  :room_rules, dependent: :destroy
+- has_one  :room_notices, dependent: :destroy
+- has_many :reservations
+- has_many :users, through: :room_users
+- has_many :room_users
+- has_many :amenities, through: :amenity_rooms
+- has_many :amenity_rooms
 
-## room_costsテーブル
+## room_ratesテーブル
 
 |Column|Type|Options|
 |------|----|-------|
-|cost_minimum|integer||
-|cost_maximum|integer||
-|cost_base|integer||
+|rate_minimum|integer||
+|rate_maximum|integer||
+|rate_base|integer||
 |cuurrency|integer||
-|room_id|reference|null:false, foreign_key: true|
+|room_id|references|null:false, foreign_key: true|
 
 ### Association
 - belongs_to :room
 
-## room_typesテーブル
-
-|Column|Type|Options|
-|------|----|-------|
-|type|string||
-|room_id|reference|null:false, foreign_key: true|
-
-### Association
-- belongs_to :room
-
-## bedroom_typesテーブル
-
-|Column|Type|Options|
-|------|----|-------|
-|bedtype|string||
-|room_id|reference|null:false, foreign_key: true|
-
-### Association
-- belongs_to :room
-
-## room_capasitysテーブル
-
-|Column|Type|Options|
-|------|----|-------|
-|capasity|integer||
-|room_id|reference|null:false, foreign_key: true|
-
-### Association
-- belongs_to :room
-
-## room_categorysテーブル
-
-|Column|Type|Options|
-|------|----|-------|
-|category|string||
-|room_id|reference|null:false, foreign_key: true|
-
-### Association
-- belongs_to :room
-
-## room_buildingsテーブル
-
-|Column|Type|Options|
-|------|----|-------|
-|building|string||
-|room_id|reference|null:false, foreign_key: true|
-
-### Association
-- belongs_to :room
-
-## room_amenitysテーブル
+## amenitiesテーブル
 
 |Column|Type|Options|
 |------|----|-------|
 |necessities|boolean||
 |wifi|boolean||
-|shamoo|boolean||
+|shampoo|boolean||
 |closet|boolean||
 |television|boolean||
 |heating|boolean||
@@ -198,6 +137,28 @@ Things you may want to cover:
 |fire_protection|boolean||
 |door_key|boolean||
 |livingroom|boolean||
+|room_id|references|null:false, foreign_key: true|
+
+### Association
+- has_many :rooms, through: :amenity_rooms
+- has_many :amenity_rooms
+
+
+## amenity_roomsテーブル
+
+|Column|Type|Options|
+|------|----|-------|
+|amenity_id|references|foreign_key: true|
+|room_id|references|foreign_key: true|
+
+### Association
+- belongs_to :amenity
+- belongs_to :room
+
+## facilitiesテーブル
+
+|Column|Type|Options|
+|------|----|-------|
 |pool|boolean||
 |kicthen|boolean||
 |washing_machine|boolean||
@@ -206,10 +167,22 @@ Things you may want to cover:
 |elevator|boolean||
 |jacuzzi|boolean||
 |gym|boolean||
-|room_id|reference|null:false, foreign_key: true|
 
 ### Association
-- belongs_to :room
+- has_many :rooms, through: :facility_rooms
+- has_many :facility_rooms
+
+
+## facility_roomsテーブル
+
+|Column|Type|Options|
+|------|----|-------|
+|facility_id|references|foreign_key: true|
+|room_id|references|foreign_key: true|
+
+### Association
+belongs_to :room
+belongs_to :amenity
 
 ## room_rulesテーブル
 
@@ -221,7 +194,7 @@ Things you may want to cover:
 |smoking|boolean||
 |event|boolean||
 |other_rule|string||
-|room_id|reference|null:false, foreign_key: true|
+|room_id|references|null:false, foreign_key: true|
 
 ### Association
 - belongs_to :room
