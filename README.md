@@ -251,6 +251,8 @@ Things you may want to cover:
 |date|string||
 |money|string||
 
+### Association
+- belongs_to :user
 
 ## restaurantsテーブル
 
@@ -259,6 +261,9 @@ Things you may want to cover:
 |name|string|null: false, unique: true, add_index :users, :name|
 |date|string||
 |money|string||
+
+### Association
+- belongs_to :user
 
 ## frequenciesテーブル
 
@@ -271,6 +276,8 @@ Things you may want to cover:
 |frequency|boolean||
 |user_id|integer||
 
+### Association
+- belongs_to :user
 
 
 
