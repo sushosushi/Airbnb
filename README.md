@@ -4,9 +4,9 @@
 
 |Column|Type|Options|
 |------|----|-------|
-|firstname|string|null: false, add_index :users, :name|
-|lastname|string|null: false, add_index :users, :name|
-|gender|enum||
+|first_name|string|null: false, add_index :users, :name|
+|last_name|string|null: false, add_index :users, :name|
+|gender|integer||
 |birthday|string||
 |email|string|null: false, unique: true, add_index :users, :mail_adress|
 |phone_number|string||
@@ -32,8 +32,8 @@
 
 |Column|Type|Options|
 |------|----|-------|
-|user_id|referrences|foreign_key: true|
-|room_id|referrences|foreign_key: true|
+|user|referrences|foreign_key: true|
+|room|referrences|foreign_key: true|
 
 ### Association
 - belongs_to :user
@@ -46,8 +46,8 @@
 |check_in|string||
 |check_out|string||
 |number_people|string||
-|user_id|references|null:false, foreign_key: true|
-|room_id|references|null:false, foreign_key: true|
+|user|references|null:false, foreign_key: true|
+|room|references|null:false, foreign_key: true|
 
 ### Association
 - belongs_to :user
@@ -107,7 +107,7 @@
 |rate_maximum|integer||
 |rate_base|integer||
 |cuurrency|integer||
-|room_id|references|null:false, foreign_key: true|
+|room|references|null:false, foreign_key: true|
 
 ### Association
 - belongs_to :room
@@ -137,7 +137,7 @@
 |fire_protection|boolean||
 |door_key|boolean||
 |livingroom|boolean||
-|room_id|references|null:false, foreign_key: true|
+|room|references|null:false, foreign_key: true|
 
 ### Association
 - belongs_to :room
@@ -168,7 +168,7 @@
 |smoking|boolean||
 |event|boolean||
 |other_rule|string||
-|room_id|references|null:false, foreign_key: true|
+|room|references|null:false, foreign_key: true|
 
 ### Association
 - belongs_to :room
@@ -221,7 +221,7 @@
 |not_know|boolean||
 |parttime|boolean||
 |frequency|boolean||
-|user_id|integer||
+|user|integer||
 
 ### Association
 - belongs_to :user
