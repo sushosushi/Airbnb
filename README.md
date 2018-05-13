@@ -32,8 +32,8 @@
 
 |Column|Type|Options|
 |------|----|-------|
-|user|referrences|foreign_key: true|
-|room|referrences|foreign_key: true|
+|user|references|foreign_key: true|
+|room|references|foreign_key: true|
 
 ### Association
 - belongs_to :user
@@ -45,7 +45,7 @@
 |------|----|-------|
 |check_in|string||
 |check_out|string||
-|number_people|string||
+|total_guest|integer||
 |user|references|null:false, foreign_key: true|
 |room|references|null:false, foreign_key: true|
 
@@ -61,9 +61,9 @@
 |image|string||
 |phone|string||
 |introduction|string||
-|room_type|string||
-|room_category|string||
-|building_type|string||
+|room_type|integer||
+|room_category|integer||
+|building_type|integer||
 |maximum_capasity|integer||
 |bedroom_number|integer||
 |bed_number|integer||
@@ -225,9 +225,6 @@
 
 ### Association
 - belongs_to :user
-
-
-
 ***
 
 
