@@ -196,7 +196,7 @@
 |------|----|-------|
 |name|string|null: false, unique: true, add_index :users, :name|
 |date|string||
-|money|string||
+|money|integer||
 
 ### Association
 - belongs_to :user
@@ -207,7 +207,7 @@
 |------|----|-------|
 |name|string|null: false, unique: true, add_index :users, :name|
 |date|string||
-|money|string||
+|money|integer||
 
 ### Association
 - belongs_to :user
