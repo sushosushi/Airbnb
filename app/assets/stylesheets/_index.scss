@@ -1,0 +1,136 @@
+.wrapper{
+  width: 100%;
+  height: 81px;
+}
+.main-index{
+  margin: 0 auto;
+  padding-left: 80px;
+  padding-right: 80px;
+  position: relative;
+  .search-link{
+    margin-top: 32px;
+    margin-bottom: 32px;
+    .sagasu{
+      padding-left: 12px;
+      width: 50%;
+      display: table;
+      table-layout: fixed;
+      .sagasu-content{
+        font-weight   : 800px;
+        font-size     : 25px;
+        line-height   : 30px;
+        letter-spacing: normal;
+        font-family   : Circular, -apple-system, BlinkMacSystemFont, Roboto, "Helvetica Neue", sans-serif;
+        color         : rgb(72, 72, 72);
+        padding-top: 10px;
+        padding-bottom: 10px;
+      }
+    }
+    .search-validation{
+      display: table;
+      border-collapse: separate;
+      border-spacing: 12px 0;
+      .accommodation{
+        display: table-cell;
+        padding-left: 8px;
+        padding-right: 8px;
+        width: 25%;
+        background-color: transparent;
+        box-shadow: rgba(0, 0, 0, 0.06) 0px 2px 4px 0px;
+        margin-bottom: 4px;
+        border-width: 1px;
+        border-style: solid;
+        border-color: rgba(0, 0, 0, 0.1);
+        border-radius: 3px;
+        padding: 0;
+        overflow: hidden;
+        .accommodation-image{
+          display: table-cell;
+          .accommodation-icon{
+            width: 96px;
+            height: 72px;
+          }
+        }
+        .accommodation-char{
+          padding-right: 16px;
+          padding-left: 16px;
+          display: table-cell;
+          vertical-align: middle;
+          font-size: 14px;
+          font-family: Circular, -apple-system, BlinkMacSystemFont, Roboto, "Helvetica Neue", sans-serif;
+          color: rgb(72, 72, 72);
+          font-weight: 800;
+        }
+      }
+      .experience{
+        display: table-cell;
+        padding-left: 8px;
+        padding-right: 8px;
+        width: 25%;
+        background-color: transparent;
+        box-shadow: rgba(0, 0, 0, 0.06) 0px 2px 4px 0px;
+        margin-bottom: 4px;
+        border-width: 1px;
+        border-style: solid;
+        border-color: rgba(0, 0, 0, 0.1);
+        border-radius: 3px;
+        padding: 0;
+        overflow: hidden;
+        .experience-image{
+          display: table-cell;
+          .experience-icon{
+            width: 96px;
+            height: 72px;
+          }
+        }
+        .experience-char{
+          padding-right: 16px;
+          padding-left: 16px;
+          display: table-cell;
+          vertical-align: middle;
+          font-size: 14px;
+          font-family: Circular, -apple-system, BlinkMacSystemFont, Roboto, "Helvetica Neue", sans-serif;
+          color: rgb(72, 72, 72);
+          font-weight: 800;
+        }
+      }
+      .restaurant{
+        display: table-cell;
+        padding-left: 8px;
+        padding-right: 8px;
+        width: 25%;
+        background-color: transparent;
+        box-shadow: rgba(0, 0, 0, 0.06) 0px 2px 4px 0px;
+        margin-bottom: 4px;
+        border-width: 1px;
+        border-style: solid;
+        border-color: rgba(0, 0, 0, 0.1);
+        border-radius: 3px;
+        padding: 0;
+        overflow: hidden;
+        .restaurant-image{
+          display: table-cell;
+          .restaurant-icon{
+            width: 96px;
+            height: 72px;
+          }
+        }
+        .restaurant-char{
+          padding-right: 16px;
+          padding-left: 16px;
+          display: table-cell;
+          vertical-align: middle;
+          font-size: 14px;
+          font-family: Circular, -apple-system, BlinkMacSystemFont, Roboto, "Helvetica Neue", sans-serif;
+          color: rgb(72, 72, 72);
+          font-weight: 800;
+        }
+      }
+    }
+  }
+
+}
+
+
+
+
