@@ -11,7 +11,6 @@
     margin-top: 32px;
     margin-bottom: 32px;
     .sagasu{
-      padding-left: 12px;
       width: 50%;
       display: table;
       table-layout: fixed;
@@ -128,7 +127,80 @@
       }
     }
   }
-
+  .airbnb-plus-sub{
+    font-weight   : 800px;
+    font-size     : 25px;
+    line-height   : 30px;
+    letter-spacing: normal;
+    font-family   : Circular, -apple-system, BlinkMacSystemFont, Roboto, "Helvetica Neue", sans-serif;
+    color         : rgb(72, 72, 72);
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
+  .airbnb-plus-background{
+    height: 300px;
+    position: relative;
+    .AirbnbPlus-background-icon{
+      height: 100%;
+      width: 100%;
+      object-fit: cover;
+      object-position: left center;
+    }
+    .airbnb-plus-contain{
+      margin-top: 40px;
+      margin-right: 40px;
+      margin-left: 40px;
+      bottom: 169px;
+      position: absolute;
+      .airbnb-plus-description{
+        margin-bottom: 15px;
+        .description-content{
+          font-weight: 800;
+          word-wrap: break-word;
+          font-size: 18px;
+          line-height: 26px;
+          letter-spacing: normal;
+          font-family: Circular, -apple-system, BlinkMacSystemFont, Roboto, "Helvetica Neue", sans-serif;
+          color: rgb(72, 72, 72);
+          margin: 0px;
+        }
+      }
+      .airbnb-plus-search{
+        .search-airbnb-plus{
+          cursor: pointer;
+          text-align: center;
+          width: auto;
+          line-height: 22px;
+          padding-top: 12px;
+          padding-bottom: 12px;
+          padding-left: 24px;
+          padding-right: 24px;
+          min-width: 77.6656px;
+          box-shadow: rgba(0, 0, 0, 0.05) 0px 4px 4px 0px;
+          border-radius: 4px;
+          border-width: 2px;
+          border-style: solid;
+          background: rgb(255, 255, 255);
+          border-color: transparent;
+          .airbnb-plus-search-content{
+            font-size: 14px;
+            line-height: 18px;
+            font-family: Circular, -apple-system, BlinkMacSystemFont, Roboto, "Helvetica Neue", sans-serif;
+            color: rgb(72, 72, 72);
+            font-weight: 800;
+          }
+        }
+      }
+    }
+    .airb_logo-icon{
+      position: absolute;
+      height: 100px;
+      width: 130px;
+      bottom: 40px;
+      left: 40px;
+      opacity: 0.8;
+    }
+  }
 }
 
 
