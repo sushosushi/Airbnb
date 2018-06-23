@@ -14,7 +14,7 @@
       width: 50%;
       display: table;
       table-layout: fixed;
-      .sagasu-content{
+      &-content{
         font-weight   : 800px;
         font-size     : 25px;
         line-height   : 30px;
@@ -43,14 +43,14 @@
         border-radius: 3px;
         padding: 0;
         overflow: hidden;
-        .accommodation-image{
+        &-image{
           display: table-cell;
           .accommodation-icon{
             width: 96px;
             height: 72px;
           }
         }
-        .accommodation-char{
+        &-char{
           padding-right: 16px;
           padding-left: 16px;
           display: table-cell;
@@ -75,14 +75,14 @@
         border-radius: 3px;
         padding: 0;
         overflow: hidden;
-        .experience-image{
+        &-image{
           display: table-cell;
           .experience-icon{
             width: 96px;
             height: 72px;
           }
         }
-        .experience-char{
+        &-char{
           padding-right: 16px;
           padding-left: 16px;
           display: table-cell;
@@ -107,14 +107,14 @@
         border-radius: 3px;
         padding: 0;
         overflow: hidden;
-        .restaurant-image{
+        &-image{
           display: table-cell;
           .restaurant-icon{
             width: 96px;
             height: 72px;
           }
         }
-        .restaurant-char{
+        &-char{
           padding-right: 16px;
           padding-left: 16px;
           display: table-cell;

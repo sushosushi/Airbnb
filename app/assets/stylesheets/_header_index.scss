@@ -5,7 +5,7 @@
   display: table;
   width: 100%;
   font-weight: 600;
-  .header-main__top-link{
+  &__top-link{
     display: table-cell;
     vertical-align: middle;
     width: 5%;
@@ -19,7 +19,7 @@
       }
     }
   }
-  .header-main__search{
+  &__search{
     display: table-cell;
     vertical-align: middle;
     width: 65%;
@@ -31,7 +31,7 @@
       border-radius: 4px;
     }
   }
-  .header-main__user-index{
+  &__user-index{
     display: table-cell;
     vertical-align: middle;
     width: 30%;
@@ -46,7 +46,7 @@
         height: 80px;
         line-height: 80px;
         padding: 8px;
-        .start-host__content{
+        &__content{
           display: inline-block;
           vertical-align: middle;
           line-height: 1;
@@ -60,7 +60,7 @@
         height: 80px;
         line-height: 80px;
         padding: 8px;
-        .help__content{
+        &__content{
           display: inline-block;
           vertical-align: middle;
           line-height: 1;
@@ -74,7 +74,7 @@
         height: 80px;
         line-height: 80px;
         padding: 8px;
-        .create-account__content{
+        &__content{
           display: inline-block;
           vertical-align: middle;
           line-height: 1;
@@ -88,7 +88,7 @@
         height: 80px;
         line-height: 80px;
         padding: 8px;
-        .login__content{
+        &__content{
           display: inline-block;
           vertical-align: middle;
           line-height: 1;
