@@ -1,0 +1,21 @@
+.header-main
+  .header-main__top-link
+    .top-link
+      = image_tag "Airbnb.png", alt: "Company Logo", class: "icon"
+  .header-main__search
+    %input{type: 'text', autocomplete: 'off', class: 'area-search',placeholder: '「サン・セバスティアン」などエリアを入力', name: 'query'}
+  .header-main__user-index
+    %nav
+      %ul.user-index
+        %li.start-host
+          .start-host__content
+            ホストをはじめる
+        %li.help
+          .help__content
+            ヘルプ
+        %li.create-account
+          .create-account__content
+            登録する
+        %li.login
+          .login__content
+            ログイン
