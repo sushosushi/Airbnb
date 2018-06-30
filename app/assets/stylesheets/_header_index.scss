@@ -52,7 +52,77 @@
           line-height: 1;
           padding: 8px;
           border-bottom: 2px solid transparent;
+          .host-submenu{
+            display: none;
+            position: absolute;
+            box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 5px;
+            background-color: white;
+            min-width: 282px;
+            max-width: 950px;
+            min-height: 60px;
+            right: 20.176%;
+            top: 11.5%;
+            border-width: 1px 1px 1px;
+            border-style: none solid solid;
+            border-color: rgb(219, 219, 219) rgb(219, 219, 219) rgb(219, 219, 219);
+            border-top: none;
+            z-index: 1;
+            .host-submenu__li1{
+              padding: 24px 24px;
+              text-align: left;
+              border-bottom: 1px solid rgb(242, 242, 242);
+              .host-share{
+                font-weight: 600;
+                word-wrap: break-word;
+                font-size: 14px;
+                line-height: 18px;
+                letter-spacing: normal;
+                font-family: Circular, -apple-system, BlinkMacSystemFont, Roboto, "Helvetica Neue", sans-serif;
+                color: rgb(72, 72, 72);
+                margin: 0px;
+              }
+              .host-share__adver{
+                font-weight: 600;
+                font-size: 12px;
+                line-height: 14px;
+                max-width: 220px;
+                padding-top: 8px;
+              }
+            }
+            .host-submenu__li2{
+              padding: 24px 24px;
+              text-align: left;
+              border-bottom: 1px solid rgb(242, 242, 242);
+              .host-introduce{
+                font-weight: 600;
+                word-wrap: break-word;
+                font-size: 14px;
+                line-height: 18px;
+                letter-spacing: normal;
+                font-family: Circular, -apple-system, BlinkMacSystemFont, Roboto, "Helvetica Neue", sans-serif;
+                color: rgb(72, 72, 72);
+                margin: 0px;
+              }
+            }
+            .host-submenu__li3{
+              padding: 24px 24px;
+              text-align: left;
+              .hotel-experience{
+                font-weight: 600;
+                word-wrap: break-word;
+                font-size: 14px;
+                line-height: 18px;
+                letter-spacing: normal;
+                font-family: Circular, -apple-system, BlinkMacSystemFont, Roboto, "Helvetica Neue", sans-serif;
+                color: rgb(72, 72, 72);
+                margin: 0px;
+              }
+            }
+          }
         }
+      }
+      .start-host:hover{
+        border-bottom: 2px solid rgb(118, 118, 118);
       }
       .help{
         display: table-cell;
@@ -68,6 +138,9 @@
           border-bottom: 2px solid transparent;
         }
       }
+      .help:hover{
+        border-bottom: 2px solid rgb(118, 118, 118);
+      }
       .create-account{
         display: table-cell;
         vertical-align: middle;
@@ -82,6 +155,9 @@
           border-bottom: 2px solid transparent;
         }
       }
+      .create-account:hover{
+        border-bottom: 2px solid rgb(118, 118, 118);
+      }
       .login{
         display: table-cell;
         vertical-align: middle;
@@ -95,6 +171,9 @@
           padding: 8px;
           border-bottom: 2px solid transparent;
         }
+      }
+      .login:hover{
+        border-bottom: 2px solid rgb(118, 118, 118);
       }
     }
   }

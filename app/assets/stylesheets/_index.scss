@@ -201,4 +201,87 @@
       opacity: 0.8;
     }
   }
+  .world-hotel{
+    padding-top: 40px;
+    padding-bottom: 40px;
+    .world-listing{
+      font-weight: 800;
+      margin-bottom: 0px;
+      font-size: 24px;
+      letter-spacing: normal;
+      font-family: Circular, -apple-system, BlinkMacSystemFont, Roboto, "Helvetica Neue", sans-serif;
+      color: rgb(72, 72, 72);
+      padding-top: 2px;
+      padding-bottom: 2px;
+    }
+    .world-hotel-content{
+      display: inline-block;
+      padding-top: 8px;
+      padding-bottom: 12px;
+      padding-right: 2px;
+      padding-left: 2px;
+      .hotel-icon{
+        width: 308px;
+        height: 205px;
+      }
+      .world-hotel-type{
+        word-wrap: break-word;
+        font-size: 12px;
+        font-family: Circular, -apple-system, BlinkMacSystemFont, Roboto, "Helvetica Neue", sans-serif;
+        color: rgb(88, 90, 58);
+        font-weight: 800;
+        margin-bottom: 2px;
+        margin-top: 2px;
+      }
+      .world-hotel-sub{
+        font-size: 16px;
+        word-wrap: break-word;
+        font-family: Circular, -apple-system, BlinkMacSystemFont, Roboto, "Helvetica Neue", sans-serif;
+        color: rgb(72, 72, 72);
+        font-weight: 800;
+        margin-top: 4px;
+      }
+      .world-hotel-money{
+        margin-top: 2px;
+        word-wrap: break-word;
+        font-size: 14px;
+        line-height: 18px;
+        font-family: Circular, -apple-system, BlinkMacSystemFont, Roboto, "Helvetica Neue", sans-serif;
+        color: rgb(72, 72, 72);
+        font-weight: normal;
+      }
+    }
+  }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
