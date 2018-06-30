@@ -67,7 +67,7 @@
             border-color: rgb(219, 219, 219) rgb(219, 219, 219) rgb(219, 219, 219);
             border-top: none;
             z-index: 1;
-            .host-submenu__li1{
+            &__li1{
               padding: 24px 24px;
               text-align: left;
               border-bottom: 1px solid rgb(242, 242, 242);
@@ -81,7 +81,7 @@
                 color: rgb(72, 72, 72);
                 margin: 0px;
               }
-              .host-share__adver{
+              &__adver{
                 font-weight: 600;
                 font-size: 12px;
                 line-height: 14px;
@@ -89,7 +89,7 @@
                 padding-top: 8px;
               }
             }
-            .host-submenu__li2{
+            &__li2{
               padding: 24px 24px;
               text-align: left;
               border-bottom: 1px solid rgb(242, 242, 242);
@@ -104,7 +104,7 @@
                 margin: 0px;
               }
             }
-            .host-submenu__li3{
+            &__li3{
               padding: 24px 24px;
               text-align: left;
               .hotel-experience{
