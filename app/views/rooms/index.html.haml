@@ -38,3 +38,16 @@
             Airbnb Plus認定済みリスティングを探す
     .airbnb-plus-logo
       = image_tag "airb_logo.svg", alt: "airb_logo", class: "airb_logo-icon"
+  .world-hotel
+    %h3.world-listing
+      世界中のリスティング
+    - @rooms.each do |r|
+      .world-hotel-content
+        .world-hotel-image
+          = image_tag r.image, class: 'hotel-icon'
+        .world-hotel-type
+          = r.other
+        .world-hotel-sub
+          = r.name
+        .world-hotel-money
+          = "¥" + r.money.to_s(:delimited) + "/泊・キャンセル無料"
