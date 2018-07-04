@@ -5,6 +5,7 @@
   display: table;
   width: 100%;
   font-weight: 600;
+  display: relative;
   &__top-link{
     display: table-cell;
     vertical-align: middle;
@@ -60,8 +61,8 @@
             min-width: 282px;
             max-width: 950px;
             min-height: 60px;
-            right: 20.176%;
-            top: 11.5%;
+            right: 288px;
+            top: 99px;
             border-width: 1px 1px 1px;
             border-style: none solid solid;
             border-color: rgb(219, 219, 219) rgb(219, 219, 219) rgb(219, 219, 219);

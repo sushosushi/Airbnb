@@ -26,23 +26,8 @@
           .help__content
             ヘルプ
         %li.create-account
-          .create-account__content
+          %a{"data-toggle" => "modal", :href => "_user-registration_modal.html.haml", :role => "button", class: '.create-account__content'}
             登録する
-          -#モーダル内容
-          -# .user-registration
-          -#   .user-registration__what
-          -#     .user-registration__what-close
-          -#     .user-registration__what-account
-          -#       .user-registration__what-account-facebook
-          -#         Facebookで登録
-          -#       .user-registration__what-account-google
-          -#         Googleで登録
-          -#       .content
-          -#         または
-          -#       .user-registration__what-account-mail
-          -#         メールアドレスで登録
-          -#       .user-registration__what-existing
-          -#         Airbnbのアカウントをお持ちですか？　ログイン
         %li.login
           .login__content
             ログイン

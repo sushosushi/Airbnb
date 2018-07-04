@@ -1,6 +1,7 @@
 .wrapper
   = render 'header_index'
 .main-index
+  = render 'user-registration_modal'
   .search-link
     %h3.sagasu
       .sagasu-content
@@ -51,3 +52,5 @@
           = r.name
         .world-hotel-money
           = "¥" + r.money.to_s(:delimited) + "/泊・キャンセル無料"
+
+
